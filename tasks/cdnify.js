@@ -19,7 +19,8 @@ function isLocalPath(filePath) {
   return typeof filePath === 'string' &&
     filePath.length &&
     filePath.indexOf('//') === -1 &&
-    filePath.indexOf('data:') !== 0;
+    filePath.indexOf('data:') !== 0&&
+    filePath.indexOf('<%') === -1;
 }
 
 // Default options
